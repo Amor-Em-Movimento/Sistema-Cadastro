@@ -6,6 +6,7 @@ const help_btn = document.querySelector('.help-btn')
 const logout_btn = document.querySelector('.logout-btn')
 const profile_btn = document.querySelector('.profile-btn')
 const btMenu = document.querySelector('.sidebar-header-btn');
+const return_btn = document.querySelector('.return-btn');
 const titleMenu = document.querySelector('.sidebar-header-title');
 
 
@@ -30,6 +31,10 @@ logout_btn.addEventListener('click', function() {
 });
 profile_btn.addEventListener('click', function() {
     window.location.href = '../pages/profile.html';
+});
+
+return_btn.addEventListener('click', function() {
+    window.location.href = '../pages/home.html';
 });
 
 

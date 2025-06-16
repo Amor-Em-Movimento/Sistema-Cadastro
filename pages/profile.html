@@ -8,7 +8,7 @@
 </head>
 <body>
     <div class="container">
-        <div class="container">
+        <div class="container-core">
             <div class="sidebar" id="sidebar">
                 <div class="sidebar-part">
                     <div class="sidebar-header">
@@ -40,7 +40,18 @@
                 </button>
             </div>
             <div class="content-body">
-                
+                <form class="form-group">
+                    <h2 class="form-title">Informações do Perfil <img src="../imgs/sistema/profile_icon.svg" alt=""></h2>
+                    <input class="form-input" type="text" placeholder="Usuário" />
+                    <input class="form-input" type="email" placeholder="Email" />
+                    <input class="form-input" type="password" placeholder="Senha" />
+                    <input class="form-input" type="password" placeholder="Confirme a Senha" />
+
+                    <div class="form-buttons">
+                        <button type="submit" class="btn-form save-btn" style="background-color:#007bff;">💾 Salvar</button>
+                        <button type="button" class="btn-form save-btn" style="background-color:#28a745;">✏️ Alterar</button>
+                    </div>
+                </form>
             </div>
             <div class="btn-footer">
                 <button class="return-btn">Voltar</button>
@@ -48,7 +59,6 @@
         </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
-    <script src="../js/home.js"></script>
     <script src="../js/js.js"></script>
 </body>
 </html>
