@@ -1,3 +1,4 @@
+/*******************************Variáveis e Constantes***********************************/
 const home_btn = document.querySelector('.home-btn')
 const buscar_btn = document.querySelector('.buscar-btn')
 const cadastro_btn = document.querySelector('.cadastro-btn')
@@ -9,7 +10,7 @@ const btMenu = document.querySelector('.sidebar-header-btn');
 const return_btn = document.querySelector('.return-btn');
 const titleMenu = document.querySelector('.sidebar-header-title');
 
-
+/*******************************Events Listener******************************************/
 home_btn.addEventListener('click', function() {
     window.location.href = '../pages/home.html';
 });
@@ -32,16 +33,19 @@ logout_btn.addEventListener('click', function() {
 profile_btn.addEventListener('click', function() {
     window.location.href = '../pages/profile.html';
 });
-
 return_btn.addEventListener('click', function() {
     window.location.href = '../pages/home.html';
 });
-
-
 btMenu.addEventListener('click', (e)=>{
     e.preventDefault();
     toggleSidebar();
 });
+titleMenu.addEventListener('click', (e)=>{
+    window.location.href = '../pages/home.html';
+});
+
+/*******************************Funções do Sistema****************************************/
+//Função de alternar o menu lateral
 function toggleSidebar() {
     document.getElementById('sidebar').classList.toggle('collapsed');
     document.querySelector('.sidebar-header-title').style.display =
@@ -51,6 +55,3 @@ function toggleSidebar() {
     });
 }
 
-titleMenu.addEventListener('click', (e)=>{
-    e.preventDefault();
-});
