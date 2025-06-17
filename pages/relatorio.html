@@ -40,37 +40,42 @@
                 </button>
             </div>
             <div class="content-body" id="relatorio-content">
-                <h3 class="filter-container-title">Filtros de Pesquisa</h3>
-                <div class="filter-container">
-                    <input class="filter-input" id="nome-filter" type="text" placeholder="Nome da Criança" />
-                    <input class="filter-input" id="data-filter" type="date" placeholder="Data de nascimento" />
-                    <input class="filter-input" id="roupa-filter" type="text" placeholder="Tam. Roupa" />
-                    <input class="filter-input" id="calcado-filter" type="text" placeholder="Tam. Calçado" />
+                <div class="filter-header">
+                    <h3 class="filter-container-title">Filtros de Pesquisa</h3>
+                    <div class="filter-container">
+                        <input class="filter-input" id="nome-filter" type="text" placeholder="Nome da Criança" />
+                        <input class="filter-input" id="data-filter" type="date" placeholder="Data de nascimento" />
+                        <input class="filter-input" id="roupa-filter" type="text" placeholder="Tam. Roupa" />
+                        <input class="filter-input" id="calcado-filter" type="text" placeholder="Tam. Calçado" />
+                    </div>
+                    <button class="btn-filter"><img src="../imgs/sistema/filter_icon_white.svg" alt="">Filtrar</button>
+                    <table>
+                        <thead>
+                            <tr>
+                            <th>ID</th>
+                            <th>Responsável</th>
+                            <th>Nome</th>
+                            <th>Data Nasc.</th>
+                            <th>Sexo</th>
+                            <th>Roupa</th>
+                            <th>Calçado</th>
+                            <th>Ações</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                            
+                        </tbody>
+                    </table>
                 </div>
-                <table>
-                    <thead>
-                        <tr>
-                        <th>ID</th>
-                        <th>Responsável</th>
-                        <th>Nome</th>
-                        <th>Data Nasc.</th>
-                        <th>Sexo</th>
-                        <th>Roupa</th>
-                        <th>Calçado</th>
-                        <th>Ações</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                        
-                    </tbody>
-                </table>
                 <button class="export-btn">
                     <img src="../imgs/sistema/export_icon.svg" alt=""> 
                     <span>Exportar Relatório</span>
                 </button>
             </div>
-            <div class="btn-footer">
-                <button class="return-btn">Voltar</button>
+            <div class="content-footer">
+                <div class="btn-footer">
+                    <button class="return-btn">Voltar</button>
+                </div>
             </div>
         </div>
     </div>

@@ -228,6 +228,16 @@ p {
     max-height: 80px;
 }
 
+.filter-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    margin: 0 auto;
+    gap: 5px;
+    width: 1200px;
+}
+
 .content-header img{
     height: 200px;
     width: 200px;
@@ -259,7 +269,7 @@ p {
 }
 
 .export-btn{
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: center;
     gap: 5px;
@@ -289,11 +299,22 @@ p {
     overflow-y: auto;
 }
 
-#relatorio-content, #buscar-content {
+#buscar-content {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: start;
+    margin: 0 auto;
+    gap: 20px;
+    width: 100%;
+    max-width: 1200px;
+    padding: 20px;
+}
+#relatorio-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
     margin: 0 auto;
     gap: 20px;
     width: 100%;
@@ -379,23 +400,39 @@ input.filter-input{
     width: 100%;
 }
 
-.btn-form{
+.btn-form, .btn-filter{
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 10px;
     background-color: #a00;
     color: #FFFFFF;
-    padding: 8px 16px;
     border: none;
     border-radius: 8px;
     cursor: pointer;
     font-weight: bold;
+}
+.btn-form{
+    padding: 8px 16px;
     font-size: 1.2rem;
+}
+.btn-filter{
+    padding: 4px 8px;
+    font-size: 1rem;
+
 }
 .btn-form img, .add-btn img{
     width:  22px;
     height: 22px;
+}
+.btn-filter img {
+    width: 24px;
+    height: 24px;
+}
+.btn-form:hover, .btn-filter:hover, .add-btn:hover {
+    background-color: #850000;
+    box-shadow: 0 4px 8px rgba(160,0,0,0.18);
+    cursor: pointer;
 }
 
 .back-btn, .next-btn{
@@ -446,7 +483,7 @@ input.filter-input{
 
 table {
     width: 100%;
-    max-width: 1000px;
+    max-width: 1200px;
     margin: 0 auto;
     border-collapse: collapse;
     background-color: #333;
