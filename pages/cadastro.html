@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="../css/style.css">
     <title>Cadastros</title>
 </head>
-<body>
+<body data-pagina="cadastro">
     <div class="container">
         <div class="container">
             <div class="sidebar" id="sidebar">
@@ -40,23 +40,24 @@
                 </button>
             </div>
             <div class="content-body" id="cadastro-content">
-                <button class="add-btn"><img src="../imgs/sistema/add_Icon_white.svg" alt="">Adicionar Criança</button>
+                <!-- <button class="add-btn"><img src="../imgs/sistema/add_Icon_white.svg" alt="">Adicionar Criança</button> -->
                 <form class="form-group">
                     <h2 class="form-title">Formulário de Cadastro <img src="../imgs/sistema/cadastro_red.svg" alt=""></h2>
-                    <input class="form-input" type="text" placeholder="Nome" value="" />
-                    <input class="form-input" type="text" placeholder="Sobrenome" value="" />
-                    <input class="form-input" type="date" placeholder="Data de Nascimento" value="" />
-                    <input class="form-input" type="text" placeholder="Tamanho da Roupa" value="" />
-                    <input class="form-input" type="text" placeholder="Tamanho do Calçado" value="" />
+                    <input class="form-input" id="nome-resp" type="text" placeholder="Nome Responsável Completo" value="" />
+                    <input class="form-input" id="nome-crianca" type="text" placeholder="Nome Criança Completo" value="" />
+                    <input class="form-input" id="data-nasc" type="date" placeholder="Data de Nascimento" value="" />
+                    <input class="form-input" id="tam-roupa" type="text" placeholder="Tamanho da Roupa" value="" />
+                    <input class="form-input" id="tam-calcado" type="number" min="13" max="50" placeholder="Tamanho do Calçado" value="" />
                     <select class="form-input">
-                        <option value="" selected>Escolha uma Opção</option>
-                        <option value="masculino">Masculino</option>
-                        <option value="feminino">Feminino</option>
+                        <option value="" selected>Sexo</option>
+                        <option value="Masculino">Masculino</option>
+                        <option value="Feminino">Feminino</option>
                     </select>
                     
-                    <div class="form-buttons">
+                    <div class="form-buttons" id="cadastro-form-buttons">
                         <button type="button" class="btn-form back-btn">⬅</button>
-                        <button type="submit" class="btn-form save-btn"><img src="../imgs/sistema/save_icon_white.svg" alt="" srcset="">Salvar</button>
+                        <button type="submit" class="btn-form save-btn" id="save-crianca-btn"><img src="../imgs/sistema/save_icon_white.svg" alt="" srcset="">Salvar</button>
+                        <button type="button" class="btn-form save-btn" id="cancel-btn">Cancelar</button>
                         <button type="button" class="btn-form next-btn">➡</button>
                     </div>
                 </form>

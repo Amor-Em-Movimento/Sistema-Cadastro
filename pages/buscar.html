@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="../css/style.css">
     <title>Cadastros</title>
 </head>
-<body>
+<body data-pagina="buscar">
     <div class="container">
         <div class="container">
             <div class="sidebar" id="sidebar">
@@ -42,9 +42,10 @@
             <div class="content-body" id="buscar-content">  
                 <h3 class="form-title">Pesquisar Registro Específico</h3>
                 <div class="search-box">
-                    <input type="text" placeholder="Digite aqui..." />
+                    <input id="search-bar" type="text" placeholder="Digite aqui..." />
                     <img src="../imgs/sistema/navbar/search_icon.svg" alt="Buscar" />
                 </div>
+                <div id="resultados-container" class="resultado-cards"></div>
             </div>
             <div class="btn-footer">
                 <button class="return-btn">Voltar</button>

@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="../css/style.css">
     <title>Cadastros</title>
 </head>
-<body>
+<body data-pagina="profile">
     <div class="container">
         <div class="container-core">
             <div class="sidebar" id="sidebar">
@@ -42,15 +42,14 @@
             <div class="content-body" id="profile-content">
                 <form class="form-group">
                     <h2 class="form-title">Informações do Perfil <img src="../imgs/sistema/profile_icon_red.svg" alt=""></h2>
-                    <input class="form-input" type="text" placeholder="Usuário" />
-                    <input class="form-input" type="email" placeholder="Email" />
-                    <input class="form-input" type="password" placeholder="Senha" />
-                    <input class="form-input" type="password" placeholder="Confirme a Senha" />
+                    <input class="form-input" id="profile-username" type="text" placeholder="Usuário" disabled/>
+                    <input class="form-input" id="profile-email" type="email" placeholder="Email" disabled/>
+                    <input class="form-input" id="profile-password" type="password" placeholder="Senha" disabled/>
+                    <input class="form-input" id="profile-confirm-password" type="password" placeholder="Confirme a Senha" disabled />
 
                     <div class="form-buttons">
-                        <button type="submit" class="btn-form save-btn"><img src="../imgs/sistema/save_icon_white.svg" alt=""> Salvar</button>
-                        <button type="button" class="btn-form save-btn"><img src="../imgs/sistema/edit_icon_white.svg" alt="">Alterar</button>
-                    </div>
+                        <button type="submit" class="btn-form save-btn" id="save-profile-btn"><img src="../imgs/sistema/save_icon_white.svg" alt=""> Salvar</button>
+                        <button type="button" class="btn-form save-btn" id="edit-profile-btn"><img src="../imgs/sistema/edit_icon_white.svg" alt="">Alterar</button>
                 </form>
             </div>
             <div class="btn-footer">

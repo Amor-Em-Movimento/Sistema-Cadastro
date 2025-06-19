@@ -10,6 +10,12 @@ login_btn.addEventListener('click', function(){
     }
 
     if (username === 'admin' && password === 'admin') {
+        const user = { 
+            username: username, 
+            email: "admin@admin.com",
+            password: password
+        };
+        localStorage.setItem('loggedUser', JSON.stringify(user));
         window.location.href = '../pages/home.html';
     } else {
         alert('Usuário ou senha incorretos.');

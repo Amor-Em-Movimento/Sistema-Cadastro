@@ -383,15 +383,15 @@ input.filter-input{
     display: flex;
     justify-content: space-between;
     width: 100%;
-    max-width: 900px;
+    max-width: 1200px;
 }
 #relatorio-content{
-    gap: 10px
+    gap: 10px;
 }
 
 #nome-filter{
-    max-width: 300px;
-    width: 50%;
+    max-width: 400px;
+    width: 100%;
 }
 
 .form-buttons, .form-footer{
@@ -399,6 +399,9 @@ input.filter-input{
     justify-content: space-between;
     width: 100%;
 }
+/* #cadastro-form-buttons{
+    justify-content: center;
+} */
 
 .btn-form, .btn-filter{
     display: flex;
@@ -436,6 +439,7 @@ input.filter-input{
 }
 
 .back-btn, .next-btn{
+    display: none;
     width: 15%;
 }
 .save-btn{
@@ -488,8 +492,9 @@ table {
     border-collapse: collapse;
     background-color: #333;
     color: white;
-    border-radius: 6px;
+    border-radius: 5px;
     overflow: hidden;
+    table-layout: fixed; /* necessário para forçar as larguras das colunas */
 }
 
 thead {
@@ -502,14 +507,55 @@ th, td {
     border: 1px solid #a00;
 }
 
-th:nth-child(1), td:nth-child(1) { width: 7%;  }    
+th:nth-child(1), td:nth-child(1) { width: 3%;  }    
 th:nth-child(2), td:nth-child(2) { width: 20%; }   
 th:nth-child(3), td:nth-child(3) { width: 20%; }   
 th:nth-child(4), td:nth-child(4) { width: 12%; }   
 th:nth-child(5), td:nth-child(5) { width: 7%;  }    
 th:nth-child(6), td:nth-child(6) { width: 8%;  }    
 th:nth-child(7), td:nth-child(7) { width: 8%;  }    
-th:nth-child(8), td:nth-child(8) { width: 15%;}   
+th:nth-child(8), td:nth-child(8) { width: auto; min-width: 130px;}  
+
+td{
+    font-size: 0.9rem;
+    color: darkred;
+    font-weight: bold;
+    background-color: #FFFFFF;
+}
+
+.acoes {
+    display: flex;
+    gap: 10px;
+    justify-content: space-evenly;
+    align-items: center;
+    border-top: none;
+    border-left: none;
+}
+
+.acoes button {
+    background-color: #a00;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 6px 10px;
+    /* font-size: 0.85rem; */
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s, box-shadow 0.2s;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.acoes button:hover {
+    background-color: #850000;
+    box-shadow: 0 2px 8px rgba(160,0,0,0.18);
+}
+
+.acoes button img, .acoes button svg {
+    width: 18px;
+    height: 18px;
+}
 
 .btn-footer{
     position: absolute;
@@ -547,4 +593,53 @@ th:nth-child(8), td:nth-child(8) { width: 15%;}
     width: 20px;
     height: 20px;
     opacity: 0.6;
+}
+
+.resultado-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 100%;
+    max-width: 600px;
+    margin-top: 5px;
+}
+
+.card-crianca {
+    background-color: #f4f4f4;
+    border: 2px solid #a00;
+    border-radius: 10px;
+    padding: 16px 20px;
+    color: #222;
+    box-shadow: 0 2px 8px rgba(160, 0, 0, 0.08);
+    position: relative;
+}
+
+.card-crianca h4 {
+    margin: 0 0 8px 0;
+    color: #a00;
+}
+
+.card-crianca p {
+    margin: 4px 0;
+    font-size: 0.95rem;
+}
+
+.btn-editar-card {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background-color: #a00;
+    color: white;
+    border: none;
+    padding: 6px 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.85rem;
+    font-weight: bold;
+    box-shadow: 0 2px 5px rgba(160, 0, 0, 0.1);
+    transition: background 0.2s;
+}
+
+.btn-editar-card:hover {
+    background-color: #850000;
 }
