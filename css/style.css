@@ -239,8 +239,8 @@ p {
 }
 
 .content-header img{
-    height: 200px;
-    width: 200px;
+    height: 70px;
+    width: 70px;
 }
 
 .profile-btn {
@@ -399,10 +399,6 @@ input.filter-input{
     justify-content: space-between;
     width: 100%;
 }
-/* #cadastro-form-buttons{
-    justify-content: center;
-} */
-
 .btn-form, .btn-filter{
     display: flex;
     align-items: center;
