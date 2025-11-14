@@ -184,7 +184,7 @@ p {
     margin-left: 10px;
 }
 
-.itemMenu-title {
+.itemMenuTitle {
     font-size: 18px;
     margin-left: 10px;
 }
@@ -209,7 +209,7 @@ p {
 }
 
 .sidebar.collapsed .headerTitle,
-.sidebar.collapsed .itemMenu-title {
+.sidebar.collapsed .itemMenuTitle {
     margin-left: 0;
 }
 
