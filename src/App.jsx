@@ -1,14 +1,16 @@
-import { useState } from 'react'
 import './App.css'
-import Navigation from './Components/Navigation'
-import Header from './Components/Header'
+import Navigation from './Components/Layouts/Navigation/index.jsx'
+import Content from './Components/Layouts/Content/Content.jsx'
+import { BrowserRouter } from 'react-router-dom'
 
 function App() {
 
   return (
     <>
-      <Navigation/>
-      <Header/>
+      <BrowserRouter>
+        <Navigation/>
+        <Content/>
+      </BrowserRouter>
       
     </>
   )
