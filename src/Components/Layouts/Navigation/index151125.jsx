@@ -11,6 +11,7 @@ import { useState } from 'react';
 
 
 export default function NavBar(){
+    const [selected, setSelected] = useState(null);
 
     return(
         <>
@@ -21,21 +22,34 @@ export default function NavBar(){
                     </button>
                     <h2 className={styles.headerTitle}>Amor em Movimento</h2>
                 </div> 
-                <div className={styles.navItens}>
+                <div>
                     <div className={styles.itemMenu}>
-                        <NavItem title="Home" image={homeimage} to='/'/>
+                        <Link to={'/'}>
+                            <NavItem title="Home" image={homeimage} to="/"
+                                     isSelected={selected === "home"}
+                                     onSelect={()=>setSelected("home")}
+                            />
+                        </Link>
                     </div>    
                     <div className={styles.itemMenu}>
-                        <NavItem title="Buscar" image={buscarimage} to='/search'/>
+                        <Link to={'/search'}>
+                            <NavItem title="Buscar" image={buscarimage}/>
+                        </Link>
                     </div>   
                     <div className={styles.itemMenu}>
-                        <NavItem title="Cadastrar" image={cadastrarimage} to='/register'/>
+                        <Link to={'/register'}>
+                            <NavItem title="Cadastrar" image={cadastrarimage}/>
+                        </Link>
                     </div>   
                     <div className={styles.itemMenu}>
-                        <NavItem title="Relatórios" image={relatoriosimage} to='/relatory'/>
+                        <Link to={'/relatory'}>
+                            <NavItem title="Relatórios" image={relatoriosimage}/>
+                        </Link>
                     </div>   
                     <div className={styles.itemMenu}>
-                        <NavItem title="Help" image={helpimage} to='/help'/>
+                        <Link to={'/help'}>
+                            <NavItem title="Help" image={helpimage}/>
+                        </Link>
                     </div>   
                 </div>
                 <div className={styles.logout}>

@@ -1,30 +1,3 @@
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    height: 100%;
-    margin: 0;
-    overflow: hidden;
-}
-
-.container {
-    display: flex;
-    justify-content: flex-start;
-    height: 100vh;
-    height: 100vh;
-    min-height: 100vh;
-    overflow: hidden;
-}
-.content {
-    height: 100vh;
-    min-height: 100vh;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    position: relative;
-    padding-bottom: 60px;
-    flex-grow: 1;
-}
 .title-home-page{
     display: flex;
     align-items: center;
@@ -50,7 +23,8 @@ body {
 .itemMenu, .header {
     display: flex;
     align-items: center;
-    margin-bottom: 15px;
+    justify-content: center;
+    margin-bottom: 30px;
     font-size: 20px;
 }
 
@@ -79,13 +53,13 @@ p {
     flex-shrink: 0;
 }
 
-.itemMenu {
+.itemMenu, .itemMenuSelected {
     display: flex;
     align-items: center;
-    gap: 10px;
-    margin: 15px 0;
+    /* margin: 30px 15px; */
     box-shadow: 0 2px 8px rgba(0,0,0,0.07);
     transition: box-shadow 0.2s;
+    width: 100%;
 }
 
 .itemMenu:hover {
@@ -94,7 +68,7 @@ p {
 
 .logout {
     margin-top: auto;
-    padding-top: 30px;
+    /* padding-top: 30px; */
     margin-bottom: 20px;
 }
 
@@ -102,8 +76,8 @@ p {
     background-color: #e01b1b;
     color: white;
     border: none;
-    padding: 8px 18px;
-    border-radius: 6px;
+    /* padding: 8px 18px; */
+    border-radius: 15px;
     cursor: pointer;
 }
 
@@ -117,6 +91,7 @@ p {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    align-items: center;
     position: relative;
 }
 .header {
@@ -150,17 +125,19 @@ p {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: auto;
-    margin-bottom: 20px;
+    /* margin-top: auto;
+    margin-bottom: 20px; */
     font-size: 16px;
     min-height: 36px;
     border-radius: 6px;
     box-shadow: none;
     width: 90%;
+    max-height: ;
     margin-left: auto;
     margin-right: auto;
     cursor: pointer;
     transition: background 0.2s;
+    height: 50px;
 }
 
 .logout:hover {
@@ -186,7 +163,7 @@ p {
 
 .itemMenuTitle {
     font-size: 18px;
-    margin-left: 10px;
+    margin-left: 15px;
 }
 
 .sidebar:not(.collapsed) .header,
@@ -194,11 +171,6 @@ p {
     justify-content: flex-start;
     text-align: left;
     align-items: center;
-}
-
-
-.sidebar:not(.collapsed) .itemMenu {
-    margin-left: 18px;
 }
 
 .sidebar.collapsed .header,
@@ -217,3 +189,25 @@ p {
     cursor: pointer;
     box-shadow: 0 4px 16px rgba(160,0,0,0.18);
 }
+
+.itemMenuSelected img, .itemMenu img {
+    filter: grayscale(0) brightness(1);
+    margin-left: 20px;
+}
+
+.itemMenuSelected {
+    margin: 0px;
+    background-color: #a00;
+    color: white;
+}
+
+.navItens{
+    max-width: 300px;
+    width: 100%;
+}
+
+.itemMenu a{
+    margin: 0px;
+    color: black;
+}
+

@@ -6,11 +6,11 @@ export default function Content () {
     return(
 
         <>
-            <aside >
-                <div className={styles.header}>
+            <aside className={styles.content}>
+                <div className={styles.contentHeader}>
                     <Header/>
                 </div>
-                <div className={styles.content}>
+                <div className={styles.contentBody}>
                     <AppRoutes/>
                 </div>
             </aside>

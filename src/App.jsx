@@ -8,8 +8,10 @@ function App() {
   return (
     <>
       <BrowserRouter>
-        <Navigation/>
-        <Content/>
+        <div className= 'container'>
+          <Navigation/>
+          <Content/>
+        </div>
       </BrowserRouter>
       
     </>

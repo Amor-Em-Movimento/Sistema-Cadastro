@@ -6,10 +6,11 @@ import RelatoryPage from '../view/RelatoryPage'
 import HelpPage from '../view/HelpPage'
 import NotFoundPage from '../view/NotFoundPage'
 
-const AppRoutes = props => {
+const AppRoutes = () => (
     <>
         <Routes>
             <Route path='/' element={<HomePage/>}/>
+            <Route path='/home' element={<HomePage/>}/>
             <Route path='/search' element={<SearchPage/>}/>
             <Route path='/register' element={<RegisterPage/>}/>
             <Route path='/relatory' element={<RelatoryPage/>}/>
@@ -17,6 +18,6 @@ const AppRoutes = props => {
             <Route path='*' element={<NotFoundPage/>}/>
         </Routes>
     </>
-}
+)
 
 export default AppRoutes;
