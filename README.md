@@ -1,16 +1,15 @@
-# React + Vite
+# Sistema-Cadastro
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A [ONG Amor em Movimento]() realiza, anualmente, uma Ação Solidária de Natal em comunidades carentes na cidade de São Paulo-SP. Essa ação engloba a doação de Kits de Natal para as crianças das comunidades.
 
-Currently, two official plugins are available:
+Atualmente, os dados essenciais de Cadastro das Famílias e Crianças, como **Nome**, **Idade**, **Gênero**, **Tamanho de roupas e sapatos**, **Endereço** e **Nome do Responsável** são coletados manualmente em papel e, posteriormente, transcritos para uma planilha do Excel. Tal procedimento, além de demorado e cansativo, também pode gerar erros e retrabalho desnecessários que acabam atrapalhando as ações da ONG.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Portanto, o Objetivo do Sistema de Cadastro é auxiliar a ONG na ação de cadastro das famílias e crianças nas comunidades. Facilitando tanto o processo de coleta de dados, quanto na distribuição dos Kits doados. Facilitando o método de coleta e organização dos kits, evitando possíveis erros de contagem ou erros de informação, e agilizando a ação realizada.
 
-## React Compiler
+## Funcionalidades
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Tecnologias Utilizadas
 
-## Expanding the ESLint configuration
+## Equipe do Projeto
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+
