@@ -13,27 +13,26 @@
     width: 70px;
 }
 
-
 .content {
+    flex: 1;
     height: 100vh;
-    min-height: 100vh;
-    box-sizing: border-box;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    overflow: hidden;
+    background-color: white;
     position: relative;
-    padding-bottom: 60px;
-    flex-grow: 1;
 }
 
-.contentHeader{
-    padding: 0px 20px;
+.contentHeader {
+    height: 80px;
+    background-color: white;
+    padding: 0 30px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    z-index: 10;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; 
     align-items: center;
-    flex-shrink: 0;
-    height: 100%;
-    max-height: 80px;
+    position: relative;
 }
 
 .contentHeader img{
@@ -42,51 +41,66 @@
 }
 
 .contentBody {
+    flex: 1;
+    padding: 30px;
+    overflow-y: auto;
+    background-color: #f8f9fa;
+    color: #333;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    gap: 20px;
-    flex: 1 1 auto;
-    overflow-y: auto;
 }
 
-.title{
+
+/* .title{
+    grid-column: 2;
+    justify-self: center;
     display: flex;
     align-items: center;
     gap: 20px;
+} */
+.title {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    white-space: nowrap;
 }
 
-.returnBtn {
+
+.returnBtn {    
     background-color: #6c757d;
     color: #fff;
-    padding: 8px 18px;
+    padding: 10px 20px;
     border: none;
-    border-radius: 8px;
+    border-radius: 6px;
     cursor: pointer;
     font-weight: bold;
-    font-size: 1.1rem;
-    transition: background 0.2s;
+    font-size: 0.9rem;
+    width: fit-content;
 }
 
-.profileBtn {
-    width: 113px;
-    height: 40px;
-    background: black;
-    border: none;
+
+.profileBtn {    
     display: flex;
     align-items: center;
-    gap: 13px;
+    gap: 10px;
+    background: #000;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
     cursor: pointer;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
-    border-radius: 8px;
-    padding: 0 16px;
+    height: 44px;
+    font-weight: bold;
 }
 
 .profileBtn img, .export-btn img {
     width: 24px;
     height: 24px;
-    /* filter: brightness(0); */
 }
 .profileBtn span {
     color: #888;
@@ -95,3 +109,15 @@
     vertical-align: middle;
 }
 
+.content {
+    height: 100vh;
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    .content {
+        margin-left: 80px; 
+        width: calc(100% - 80px);
+        padding-bottom: 80px; 
+    }
+}
