@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import profileIcon from '../assets/imgs/profile_icon.svg'; // Reutilizando o ícone existente
+import profileIcon from '/imgs/profile_icon.svg';
 
 export default function ProfilePage() {
     const [userData, setUserData] = useState({

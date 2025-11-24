@@ -1,6 +1,5 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
-import logo from '../assets/imgs/logotipo_amoremmovimento.png'; // Verifique se o caminho está correto ou use o import existente
+import logo from '/imgs/logotipo_amoremmovimento.png';
 
 export default function HomePage() {
     return (
