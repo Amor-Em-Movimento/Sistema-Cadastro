@@ -1,5 +1,5 @@
-import logoAEM from '/src/assets/imgs/logotipo_amoremmovimento.png'
-import profileIcon from '/src/assets/imgs/profile_icon.svg'
+import logoAEM from '/imgs/logotipo_amoremmovimento.png'
+import profileIcon from '/imgs/profile_icon.svg'
 import styles from '../styles.module.css'
 import { useLocation, useNavigate } from 'react-router-dom';
 import { useAuth } from '../../../../Context/AuthContext.jsx'

@@ -1,6 +1,11 @@
 import React, { useState } from 'react';
+import { useData } from '../Context/DataContext';
+import { useNavigate } from 'react-router-dom';
 
 export default function RegisterPage() {
+    const { addFamily } = useData();
+    const navigate = useNavigate();
+
     const [formData, setFormData] = useState({
         nomeResponsavel: '',
         cpf: '',
@@ -18,8 +23,16 @@ export default function RegisterPage() {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        alert('Dados salvos com sucesso! (Simulação)');
-        console.log(formData);
+        
+        addFamily({
+            nomeResponsavel: formData.nomeResponsavel,
+            bairro: formData.endereco.split(',')[2] || 'Não informado',
+            dependentes: formData.qtdDependentes,
+            ...formData
+        });
+
+        alert('Família cadastrada com sucesso!');
+        navigate('/search');
     };
 
     const inputStyle = {
@@ -50,7 +63,6 @@ export default function RegisterPage() {
                         <input className="form-input" type="text" name="nomeResponsavel" onChange={handleChange} placeholder="Ex: Maria Silva" />
                     </div>
 
-                    {/* A classe .form-row cuida de deixar um ao lado do outro no PC e um abaixo do outro no Mobile */}
                     <div className="form-row">
                         <div className="form-group">
                             <label>CPF</label>

@@ -5,6 +5,7 @@ import LoginPage from './view/LoginPage.jsx'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import PrivateRoute from './Routes/PrivateRoute.jsx'
 import { AuthProvider } from './Context/AuthContext.jsx'
+import { DataProvider } from './Context/DataContext.jsx'
 
 const MainLayout = () => (
   <div className='container'>
@@ -18,12 +19,14 @@ function App() {
     <>
       <BrowserRouter>
         <AuthProvider>
-          <Routes>
-            <Route path="/login" element={<LoginPage />} />
-            <Route element={<PrivateRoute />}>
-              <Route path="/*" element={<MainLayout />} />
-            </Route>
-          </Routes>
+          <DataProvider>
+            <Routes>
+              <Route path="/login" element={<LoginPage />} />
+              <Route element={<PrivateRoute />}>
+                <Route path="/*" element={<MainLayout />} />
+              </Route>
+            </Routes>
+          </DataProvider>
         </AuthProvider>
       </BrowserRouter>
     </>
